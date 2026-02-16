@@ -1,6 +1,6 @@
 {
 	"name": "perf-fn",
-	"version": "0.0.0-development",
+	"version": "1.0.0",
 	"description": "Measure async and sync function execution time using the Performance API",
 	"license": "MIT",
 	"repository": "mstuart/perf-fn",
