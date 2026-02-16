@@ -1,0 +1,56 @@
+{
+	"name": "perf-fn",
+	"version": "0.0.0-development",
+	"description": "Measure async and sync function execution time using the Performance API",
+	"license": "MIT",
+	"repository": "mstuart/perf-fn",
+	"funding": "https://github.com/sponsors/mstuart",
+	"author": {
+		"name": "Mark Stuart",
+		"email": "mstuart@users.noreply.github.com",
+		"url": "https://github.com/mstuart"
+	},
+	"type": "module",
+	"exports": {
+		"types": "./index.d.ts",
+		"default": "./index.js"
+	},
+	"sideEffects": false,
+	"engines": {
+		"node": ">=20"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"performance",
+		"measure",
+		"timing",
+		"benchmark",
+		"duration",
+		"perf"
+	],
+	"devDependencies": {
+		"ava": "^6.0.0",
+		"tsd": "^0.31.0",
+		"xo": "^0.60.0"
+	},
+	"xo": {
+		"rules": {
+			"unicorn/prevent-abbreviations": [
+				"error",
+				{
+					"allowList": {
+						"perfFn": true,
+						"perfFnSync": true,
+						"PerfResult": true
+					}
+				}
+			]
+		}
+	}
+}
