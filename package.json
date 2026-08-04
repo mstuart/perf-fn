@@ -40,8 +40,11 @@
 		"xo": "^4.0.0"
 	},
 	"xo": {
+		"files": [
+			"**/*.js"
+		],
 		"rules": {
-			"unicorn/prevent-abbreviations": [
+			"unicorn/name-replacements": [
 				"error",
 				{
 					"allowList": {

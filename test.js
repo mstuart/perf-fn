@@ -82,10 +82,10 @@ test('perfFnSync is a named export', t => {
 
 test('perfFn result has exactly result and duration properties', async t => {
 	const measurement = await perfFn(async () => true);
-	t.deepEqual(Object.keys(measurement).sort(), ['duration', 'result']);
+	t.deepEqual(Object.keys(measurement).toSorted((a, b) => a.localeCompare(b)), ['duration', 'result']);
 });
 
 test('perfFnSync result has exactly result and duration properties', t => {
 	const measurement = perfFnSync(() => true);
-	t.deepEqual(Object.keys(measurement).sort(), ['duration', 'result']);
+	t.deepEqual(Object.keys(measurement).toSorted((a, b) => a.localeCompare(b)), ['duration', 'result']);
 });
