@@ -1,7 +1,16 @@
-# perf-fn
+<div align="center">
+  <img src="docs/assets/logo.svg" alt="perf-fn — Measure async and sync function execution time using the Performance API" width="720">
+</div>
 
-> Measure async and sync function execution time using the Performance API
+<p align="center"><strong>Measure async and sync function execution time using the Performance API</strong></p>
 
+<p align="center">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://www.npmjs.com/package/perf-fn"><img src="https://img.shields.io/npm/v/perf-fn?label=npm" alt="npm"></a>
+  <img src="https://img.shields.io/badge/node-%E2%89%A520-339933.svg" alt="Node 20+">
+</p>
+
+---
 ## Install
 
 ```sh
