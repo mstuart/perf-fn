@@ -1,14 +1,13 @@
-export type PerfResult<T> = {
-	/**
-	The return value of the measured function.
-	*/
-	result: T;
-
-	/**
+export interface PerfResult<T> {
+  /**
 	The execution time in milliseconds.
 	*/
-	duration: number;
-};
+  duration: number;
+  /**
+	The return value of the measured function.
+	*/
+  result: T;
+}
 
 /**
 Measure the execution time of an async function using the Performance API.
@@ -28,7 +27,9 @@ const {result, duration} = await perfFn(async () => {
 console.log(`Took ${duration}ms`);
 ```
 */
-export default function perfFn<T>(function_: () => T | Promise<T>): Promise<PerfResult<Awaited<T>>>;
+export default function perfFn<T>(
+  function_: () => T | Promise<T>
+): Promise<PerfResult<Awaited<T>>>;
 
 /**
 Measure the execution time of a synchronous function using the Performance API.
