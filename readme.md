@@ -39,6 +39,10 @@ const {result: data, duration: syncTime} = perfFnSync(() => JSON.parse('{"key": 
 
 ### perfFn(function\_)
 
+Measures an async or synchronous function and returns `{duration, result}`.
+`duration` is expressed in milliseconds using the high-resolution Performance
+API. If the function rejects, the rejection is propagated unchanged.
+
 Returns a `Promise<{result, duration}>` where `duration` is in milliseconds.
 
 #### function\_
@@ -48,6 +52,9 @@ Type: `() => T | Promise<T>`
 The async or sync function to measure.
 
 ### perfFnSync(function\_)
+
+Measures a synchronous function and returns `{duration, result}`. If the
+function throws, the error is propagated unchanged.
 
 Returns `{result, duration}` where `duration` is in milliseconds.
 
